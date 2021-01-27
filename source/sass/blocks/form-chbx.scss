@@ -1,0 +1,130 @@
+.form-chbx {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  width: 280px;
+  min-height: 58px;
+  margin-bottom: 19px;
+}
+
+@media (min-width: $tablet-width) {
+  .form-chbx {
+    width: 230px;
+    margin-bottom: 31px;
+    margin-right: 28px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .form-chbx {
+    margin-right: 53px;
+    width: 205px;
+    padding-left: 0;
+  }
+
+  .form-chbx:nth-child(4n-1) {
+    margin-right: 34px;
+  }
+
+  .form-chbx:nth-child(4n) {
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .form-chbx--park {
+    order: 2;
+  }
+}
+
+@media (max-width: 767px) {
+  .form-chbx--bell {
+    order: 3;
+  }
+}
+
+.form-chbx--rocks {
+  order: 4;
+}
+
+.form-chbx__label {
+  position: relative;
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: bold;
+  color: #000000;
+  padding-left: 79px;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 55px;
+    height: 55px;
+    background-color: #f2f2f2;
+    top: -14px;
+    left: 1px;
+    border-radius: 10%;
+  }
+
+  &:hover::before {
+    background-color: #e5e5e5;
+  }
+
+  &:active::before {
+    background-color: #d5d5d5;
+  }
+}
+
+.form-chbx__input:focus + .form-chbx__label::before {
+  background-color: #e5e5e5;
+}
+
+.form-chbx__label-tick {
+  display: none;
+  position: absolute;
+  content: "";
+  width: 4px;
+  height: 20px;
+  background-color: #000000;
+  top: 4px;
+  left: 31px;
+  transform: rotate(45deg);
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 4px;
+    height: 13px;
+    background-color: #000000;
+    top: 12px;
+    left: -5px;
+    transform: rotate(-90deg);
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .form-chbx__label-tick {
+    left: 30px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .form-chbx__label-tick {
+    left: 31px;
+  }
+}
+
+.form-chbx__input:checked ~ .form-chbx__label-tick {
+  display: inline-block;
+}
+
+.form-chbx__label:active ~ .form-chbx__label-tick,
+.form-chbx__label:active ~ .form-chbx__label-tick::before {
+  background-color: #a4a4a4;
+}
+
+.form-chbx__input:disabled ~ .form-chbx__label-tick,
+.form-chbx__input:disabled ~ .form-chbx__label-tick::before {
+  display: inline-block;
+  background-color: #a4a4a4;
+}
