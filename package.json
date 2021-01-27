@@ -41,7 +41,7 @@
     "images": "gulp images && gulp webp",
 
     "build": "gulp build",
-    "start": "npm run build && gulp server"
+    "start": "npm run build && gulp server",
     "build": "npx gulp build",
     "start": "npm run build && gulp serve"
   },
