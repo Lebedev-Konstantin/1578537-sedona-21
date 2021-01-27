@@ -1,0 +1,32 @@
+.button {
+  display: block;
+  vertical-align: middle;
+  width: 280px;
+  min-height: 58px;
+  font-family: $page-font;
+  font-size: 21px;
+  line-height: 26px;
+  color: $white;
+  font-weight: bold;
+  background-color: $main-blue;
+  margin: 0 auto;
+  padding-top: 15px;
+  border: none;
+  cursor: pointer;
+  text-transform: uppercase;
+
+  &:hover,
+  &:focus {
+    outline: none;
+    background-color: #669ec0;
+  }
+
+  &:active {
+    background-color: #5496bd;
+    color: rgba(255, 255, 255, 0.3);
+  }
+
+  &:disabled {
+    background-color: #e5e5e5;
+  }
+}
