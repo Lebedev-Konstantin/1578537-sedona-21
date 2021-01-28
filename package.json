@@ -36,6 +36,9 @@
     "images": "gulp images && gulp webp",
     "build": "gulp build",
     "start": "npm run build && gulp server"
+    "build": "npx gulp build",
+    "start": "npm run build && gulp serve"
+
   },
   "browserslist": [
     "last 2 versions",
